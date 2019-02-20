@@ -21,6 +21,7 @@ namespace dbmasteraapp.Views
                 new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" },
                 new HomeMenuItem {Id = MenuItemType.Settings, Title="Settings" },
+                new HomeMenuItem {Id = MenuItemType.PesquisaHelpDesk, Title="Pesquisa" },
                 new HomeMenuItem {Id = MenuItemType.TicketDetail, Title="Ticket Detail" }
             };
 
