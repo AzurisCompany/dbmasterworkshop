@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dbmasteraapp.Views.PesquisaHelpDesk" BackgroundColor="Gray">
+    <ContentPage.Content>
+        <StackLayout Margin="10" >
+            <StackLayout>
+                <Button Text="Abrir Novo Chamado" HorizontalOptions="Fill" BorderRadius="7" BackgroundColor="Red" TextColor="White" />
+            </StackLayout>
+            <StackLayout>
+
+                <Grid BackgroundColor="White" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <BoxView Color="LightGray" Grid.Column="0" Grid.Row="0"/>
+                    <Label Text="Pesquisa chamados" FontAttributes="Bold" FontSize="18" Grid.Row="0" Grid.Column="0" Margin="5,0,0,0"  HorizontalOptions="Fill" VerticalTextAlignment="Center" TextColor="Red" />
+                    <Label FontAttributes="Bold" FontSize="14" Grid.Row="1" Grid.Column="0" Text="Busca Rápida" TextColor="Black" Margin="10,0,0,0" VerticalOptions="StartAndExpand" />
+                    <Entry Text="" Grid.Row="2" Grid.Column="0"  Margin="10,0,0,0" VerticalOptions="StartAndExpand"/>
+                    <Label FontAttributes="Bold" FontSize="14" Grid.Row="3" Grid.Column="0" Text="Projeto" TextColor="Black" Margin="10,0,0,0" VerticalOptions="StartAndExpand"/>
+                    <Entry Text="" Grid.Row="4" Grid.Column="0" Margin="10,0,0,0" VerticalOptions="StartAndExpand"/>
+                    <Label FontAttributes="Bold" FontSize="14" Grid.Row="5" Grid.Column="0" Text="Status" TextColor="Black" Margin="10,0,0,0" VerticalOptions="StartAndExpand"/>
+                    <Entry Text="" Grid.Row="6" Grid.Column="0" Margin="10,0,0,0" VerticalOptions="StartAndExpand"/>
+                    <BoxView Color="LightGray" Grid.Column="0" Grid.Row="7"/>
+                    <Label Text="Exibir Apenas" FontAttributes="Bold" FontSize="18" Grid.Row="7" Grid.Column="0" Margin="5,0,0,0"  HorizontalOptions="Fill" VerticalTextAlignment="Center" TextColor="Red" />
+
+                    <Switch IsToggled="false"  Grid.Column="0" Grid.Row="8" Margin="0,0,40,0"/>
+                    <Label FontAttributes="Bold" FontSize="14" Grid.Row="8" Grid.Column="0" Text="Que eu acompanha" TextColor="Black"  Margin="10,0,0,0" VerticalOptions="CenterAndExpand"/>
+                    <Switch IsToggled="false"  Grid.Column="0" Grid.Row="9" Margin="0,0,40,0"  />
+                    <Label FontAttributes="Bold" FontSize="14" Grid.Row="9" Grid.Column="0" Text="Meus chamados" TextColor="Black"  Margin="10,0,0,0" VerticalOptions="CenterAndExpand"/>
+                </Grid>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

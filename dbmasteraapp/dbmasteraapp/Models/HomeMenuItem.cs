@@ -8,7 +8,8 @@ namespace dbmasteraapp.Models
     {
         Browse,
         About,
-        Settings
+        Settings,
+        PesquisaHelpDesk
     }
     public class HomeMenuItem
     {
