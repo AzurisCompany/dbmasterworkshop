@@ -1,5 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 using Xamarin.Forms.Xaml;
 using dbmasteraapp.Views;
 
@@ -14,9 +15,16 @@ namespace dbmasteraapp
         public App()
         {
             InitializeComponent();
+            if (Preferences.Get("isLogged", false))
+            {
+                MainPage = new MainPage();
+            }
+            else
+            {
+                MainPage = new LoginPage();
+            }
+            MainPage.SetValue(NavigationPage.BarBackgroundColorProperty, Color.Red); //COR DA BARRA DE STATUS
 
-            MainPage = new LoginPage(); 
-            
             MessagingCenter.Subscribe<object>(this, EVENT_LAUNCH_LOGIN_PAGE, SetLoginPageAsRootPage);
             MessagingCenter.Subscribe<object>(this, EVENT_LAUNCH_MAIN_PAGE, SetMainPageAsRootPage);
             

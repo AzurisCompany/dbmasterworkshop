@@ -2,6 +2,7 @@
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace dbmasteraapp.Views
 {
@@ -18,6 +19,7 @@ namespace dbmasteraapp.Views
 
         private void BtnLogin_Clicked(object sender, EventArgs e)
         {
+            Preferences.Set("isLogged", true);
             MessagingCenter.Send<object>(this, App.EVENT_LAUNCH_MAIN_PAGE);
         }
 
