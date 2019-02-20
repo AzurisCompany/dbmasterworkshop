@@ -22,7 +22,8 @@ namespace dbmasteraapp.Views
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" },
                 new HomeMenuItem {Id = MenuItemType.Settings, Title="Settings" },
                 new HomeMenuItem {Id = MenuItemType.PesquisaHelpDesk, Title="Pesquisa" },
-                new HomeMenuItem {Id = MenuItemType.TicketDetail, Title="Ticket Detail" }
+                new HomeMenuItem {Id = MenuItemType.TicketDetail, Title="Ticket Detail" },
+                new HomeMenuItem {Id = MenuItemType.CriarChamado, Title = "Novo Chamado" }
             };
 
             ListViewMenu.ItemsSource = menuItems;
