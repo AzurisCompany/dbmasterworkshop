@@ -17,9 +17,13 @@ namespace dbmasteraapp.Views
 			InitializeComponent ();
 		}
 
-        private void Button_Clicked()
+        private async void Button_Limpar(object sender, EventArgs e)
         {
-
+          //  await Navigation.PushAsync(new PesquisaHelpDesk());
         }
+        private void Button_Buscar(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ResultadoPesquisa());
+        }   
     }
 }

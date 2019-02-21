@@ -17,7 +17,7 @@ namespace dbmasteraapp
             InitializeComponent();
             if (Preferences.Get("isLogged", false))
             {
-                MainPage = new PesquisaHelpDesk();
+                MainPage = new MainPage();
             }
             else
             {
@@ -37,7 +37,7 @@ namespace dbmasteraapp
 
         private void SetMainPageAsRootPage(object sender)
         {
-            MainPage = new PesquisaHelpDesk();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()
