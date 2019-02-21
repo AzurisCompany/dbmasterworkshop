@@ -14,6 +14,8 @@ namespace dbmasteraapp.Models
         public string Login { get; set; }
         [MaxLength(300), NotNull]
         public string Senha { get; set; }
+        [MaxLength(250), NotNull]
+        public string Nome { get; set; }
         [NotNull]
         public bool IsLogado { get; set; } = false;
         public DateTime UltimoAcesso { get; set; } = DateTime.Now;

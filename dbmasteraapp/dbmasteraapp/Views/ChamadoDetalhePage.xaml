@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dbmasteraapp.Views.ChamadoDetalhePage"
+             Title="Detalhe do Chamado">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Button Text="Em atendimento" BackgroundColor="Yellow" TextColor="White" BorderRadius="2" BorderColor="White" BorderWidth="1"/>
+                <Label Text="Título do chamado" TextColor="DarkRed"/>
+                <Label Text="{Binding Titulo}"/>
+                <Label Text="Dados do chamado" TextColor="DarkRed"/>
+                <Label Text="{Binding Codigo, StringFormat='Código: &#10;{0}'}"/>
+                <Label Text="{Binding DataInclusao, StringFormat='Data inclusão: &#10;{0:dd/MM/yyyy HH:mm}'}"/>
+                <Label Text="{Binding DataAlteracao, StringFormat='Data alteração: &#10;{0:dd/MM/yyyy HH:mm}'}"/>
+                <Label Text="{Binding Categoria, StringFormat='Categoria: &#10;{0}'}"/>
+                <Label Text="{Binding Projeto, StringFormat='Projeto: &#10;{0}'}"/>
+                <Label Text="{Binding Maquina, StringFormat='Máquina: &#10;{0}'}"/>
+                <Label Text="{Binding Path=Responsavel.Nome, StringFormat='Responsável: &#10;{0}'}"/>
+                <Label Text="{Binding Path=Criador.Nome, StringFormat='Criador: &#10;{0}'}"/>
+                <Label Text="{Binding TipoChamado, StringFormat='Tipo do Chamado: &#10;{0}'}"/>
+                <Label Text="{Binding Prioridade, StringFormat='Prioridade: &#10;{0}'}"/>
+                <Label Text="Descrição" TextColor="DarkRed"/>
+                <Label Text="{Binding Descricao}"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
