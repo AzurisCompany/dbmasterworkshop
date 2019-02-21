@@ -19,7 +19,7 @@ namespace dbmasteraapp.Views
 
         private async void Button_Limpar(object sender, EventArgs e)
         {
-          //  await Navigation.PushAsync(new PesquisaHelpDesk());
+            await Navigation.PushAsync(new PesquisaHelpDesk());
         }
         private void Button_Buscar(object sender, EventArgs e)
         {
