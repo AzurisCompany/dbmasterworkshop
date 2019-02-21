@@ -41,6 +41,9 @@ namespace dbmasteraapp.Views
                     case (int)MenuItemType.TicketDetail:
                         MenuPages.Add(id, new NavigationPage(new ChamadoDetalhePage()));
                         break;
+                    case (int)MenuItemType.CriarChamado:
+                        MenuPages.Add(id, new NavigationPage(new CriarChamado()));
+                        break;
                 }
             }
             var newPage = MenuPages[id];

@@ -40,7 +40,8 @@ namespace dbmasteraapp.Services
                     var usuario = new Usuario
                     {
                         Login = "root",
-                        Senha = "123"
+                        Senha = "123",
+                        Nome = "fulano"
                     };
                     conn.Insert(usuario);
                 }

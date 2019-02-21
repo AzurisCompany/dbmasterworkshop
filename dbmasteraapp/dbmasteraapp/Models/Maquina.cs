@@ -4,7 +4,7 @@ using System.Text;
 
 namespace dbmasteraapp.Models
 {
-    class Projeto
+    class Maquina
     {
         public int Codigo { get; set; }
         public string Nome { get; set; }

@@ -3,25 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="dbmasteraapp.Views.SettingsPage"
              xmlns:vm="clr-namespace:dbmasteraapp.ViewModels"
-             Title="{Binding Title}">
+             Title="{Binding Title}" BackgroundColor="#EAEAEA">
     <ContentPage.BindingContext>
         <vm:SettingsViewModel />
     </ContentPage.BindingContext>
-        <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="Fill">
-            <Grid BackgroundColor="White">
-                <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="90*"/>
-                </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Ative ou Desative as notificações" TextColor="Black"  VerticalTextAlignment="Center"  Margin="20"/>
-                
-            <Switch IsToggled="true" Grid.Column="1" Grid.Row="1" Margin="20,0,20,0"  />
-                <Label FontAttributes="Bold" Grid.Row="1" Grid.Column="1" Text="Notificações" TextColor="Black"  VerticalTextAlignment="Center" />
-            </Grid>
+    <StackLayout Orientation="Vertical" Spacing="20" Margin="10">
+        <Label Text="Ative ou desative o envio de notificações" />
+        <StackLayout Orientation="Horizontal" BackgroundColor="White" Padding="20">
+            <Label Text="Notificacoes" FontSize="Medium"  VerticalOptions="Start" FontAttributes="Bold" />
+            <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="EndAndExpand">
+                <BoxView  WidthRequest ="20" HeightRequest="20" VerticalOptions="Start" HorizontalOptions="EndAndExpand" />
+                <Switch IsToggled="true" HorizontalOptions="Start" VerticalOptions="Start"/>
+            </StackLayout>
         </StackLayout>
+    </StackLayout>
     
 </ContentPage>

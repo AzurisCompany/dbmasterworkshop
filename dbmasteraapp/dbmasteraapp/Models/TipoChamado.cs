@@ -4,9 +4,9 @@ using System.Text;
 
 namespace dbmasteraapp.Models
 {
-    class Projeto
+    class TipoChamado
     {
         public int Codigo { get; set; }
-        public string Nome { get; set; }
+        public string Descricao { get; set; }
     }
 }
