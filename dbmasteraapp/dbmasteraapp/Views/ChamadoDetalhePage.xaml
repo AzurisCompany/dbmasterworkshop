@@ -22,6 +22,25 @@
                 <Label Text="{Binding Prioridade, StringFormat='Prioridade: &#10;{0}'}"/>
                 <Label Text="Descrição" TextColor="DarkRed"/>
                 <Label Text="{Binding Descricao}"/>
+                <ListView ItemsSource="{Binding Comentarios}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label TextColor="DarkRed">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="{Binding Path=UsuarioInclusao.Nome}"/>
+                                                <Span Text="{Binding DataInclusao, StringFormat=' - {0:dd/MM/yyyy HH:mm:ss}'}"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label Text="{Binding Descricao}" VerticalOptions="StartAndExpand"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
