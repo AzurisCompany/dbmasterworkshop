@@ -37,7 +37,7 @@ namespace dbmasteraapp
 
         private void SetMainPageAsRootPage(object sender)
         {
-            MainPage = new MainPage();
+            MainPage = new PesquisaHelpDesk();
         }
 
         protected override void OnStart()
