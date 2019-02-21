@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -39,14 +40,13 @@ namespace dbmasteraapp.Views
                         MenuPages.Add(id, new NavigationPage(new PesquisaHelpDesk()));
                         break;
                     case (int)MenuItemType.TicketDetail:
-                        MenuPages.Add(id, new NavigationPage(new TicketDetailPage()));
+                        MenuPages.Add(id, new NavigationPage(new ChamadoDetalhePage()));
                         break;
                     case (int)MenuItemType.CriarChamado:
                         MenuPages.Add(id, new NavigationPage(new CriarChamado()));
                         break;
                 }
             }
-
             var newPage = MenuPages[id];
 
             if (newPage != null && Detail != newPage)
