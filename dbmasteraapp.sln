@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dbmasteraapp.Android", "dbm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dbmasteraapp.iOS", "dbmasteraapp\dbmasteraapp.iOS\dbmasteraapp.iOS.csproj", "{301B1487-27C1-4C8F-A6D5-F3F0FD091A4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dbmasteraapp", "dbmasteraapp\dbmasteraapp\dbmasteraapp.csproj", "{B4CE98D3-8498-4B82-9EB7-6F07C13C741B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dbmasteraapp", "dbmasteraapp\dbmasteraapp\dbmasteraapp.csproj", "{B4CE98D3-8498-4B82-9EB7-6F07C13C741B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Preferences", "Preferences", "{8D40C0C6-9B70-4833-AA71-CECB58A540CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

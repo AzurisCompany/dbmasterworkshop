@@ -15,7 +15,7 @@ namespace dbmasteraapp.Views
 	{
 
 		public ChamadoDetalhePage ()
-		{            
+		{
             InitializeComponent ();
             GetChamado();
 		}
@@ -41,7 +41,16 @@ namespace dbmasteraapp.Views
             Comentario c = new Comentario();
             c.Codigo = 1;
             c.Descricao = "caminho web service SVN \n\n\nhttp://svn.dbmaster.com.br/svn/Clientes/DBMaster/Mobile/trunk/server/dbmasterws";
+            c.Descricao = c.Descricao.Replace("\\n", Environment.NewLine);
             c.DataInclusao = new DateTime(2019, 2, 21, 8, 38, 56);
+            c.UsuarioInclusao = new Usuario();
+            c.UsuarioInclusao.Nome = "Anderson Sidor";
+            t.Comentarios.Add(c);
+            c = new Comentario();
+            c.Codigo = 1;
+            c.Descricao = "chamadas webservices \n\n\n\n\n\nhttp...\n\n\nvar url=...";
+            c.Descricao = c.Descricao.Replace("\\n", Environment.NewLine);
+            c.DataInclusao = new DateTime(2019, 2, 21, 8, 31, 10);
             c.UsuarioInclusao = new Usuario();
             c.UsuarioInclusao.Nome = "Anderson Sidor";
             t.Comentarios.Add(c);
