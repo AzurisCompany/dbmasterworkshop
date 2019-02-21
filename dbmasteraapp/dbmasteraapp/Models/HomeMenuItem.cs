@@ -10,7 +10,6 @@ namespace dbmasteraapp.Models
         About,
         Settings,
         PesquisaHelpDesk,
-        TicketDetail,
         CriarChamado
     }
     public class HomeMenuItem

@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout Margin="10" >
             <StackLayout>
-                <Button Text="Abrir Novo Chamado" HorizontalOptions="Fill" BorderRadius="7" BackgroundColor="Red" TextColor="White" />
+                <Button x:Name="btnNovoChamado" Clicked="btnNovoChamado_Clicked" Text="Abrir Novo Chamado" HorizontalOptions="Fill" BorderRadius="7" BackgroundColor="Red" TextColor="White" />
             </StackLayout>
             <StackLayout>
 
@@ -34,11 +34,11 @@
                     <Entry Text="" Grid.Row="2" Grid.Column="0"  Margin="10,0,0,0" VerticalOptions="StartAndExpand"/>
                     <Label FontAttributes="Bold"  Grid.Row="3" Grid.Column="0" Text="Projeto" TextColor="Black" Margin="10,0,0,0" VerticalOptions="StartAndExpand"/>
                  
-                    <Picker Grid.Row="4" Grid.Column="0" Margin="10,0,0,0" VerticalOptions="StartAndExpand" />
+                    <Picker x:Name="ProjetosTela" Grid.Row="4" Grid.Column="0" Margin="10,0,0,0" VerticalOptions="StartAndExpand" />
                     
                     <Label FontAttributes="Bold"  Grid.Row="5" Grid.Column="0" Text="Status" TextColor="Black" Margin="10,0,0,0" VerticalOptions="StartAndExpand"/>
-                 
-                    <Picker Title="" Grid.Row="6" Grid.Column="0" Margin="10,0,0,0" VerticalOptions="StartAndExpand"/>
+
+                    <Picker x:Name="StatusTela" Grid.Row="6" Grid.Column="0" Margin="10,0,0,0" VerticalOptions="StartAndExpand"/>
                     
                     <BoxView Color="LightGray" Grid.Column="0" Grid.Row="7"/>
                     <Label Text="Exibir Apenas" FontAttributes="Bold" FontSize="Medium" Grid.Row="7" Grid.Column="0" Margin="5,0,0,0"  HorizontalOptions="Fill" VerticalTextAlignment="Center" TextColor="Red" />

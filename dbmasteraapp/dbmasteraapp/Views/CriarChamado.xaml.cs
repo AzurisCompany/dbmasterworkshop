@@ -18,9 +18,9 @@ namespace dbmasteraapp.Views
             InitializeComponent();
 
             var projetos = new List<Projeto>();
-            projetos.Add(new Projeto { Codigo = 1, Nome = "Crm" });
-            projetos.Add(new Projeto { Codigo = 1, Nome = "Portal cliente" });
-            projetos.Add(new Projeto { Codigo = 1, Nome = "Portal vendas" });
+            projetos.Add(new Projeto { Codigo = 1, Descricao = "Crm" });
+            projetos.Add(new Projeto { Codigo = 1, Descricao = "Portal cliente" });
+            projetos.Add(new Projeto { Codigo = 1, Descricao = "Portal vendas" });
 
             var tipoChamado = new List<TipoChamado>();
             tipoChamado.Add(new TipoChamado { Codigo = 1, Descricao = "Desenvolvimento" });
@@ -28,9 +28,9 @@ namespace dbmasteraapp.Views
             tipoChamado.Add(new TipoChamado { Codigo = 1, Descricao = "Sugestão" });
 
             var maquinas = new List<Maquina>();
-            maquinas.Add(new Maquina { Codigo = 1, Nome = "Máquina 1" });
-            maquinas.Add(new Maquina { Codigo = 1, Nome = "Máquina 2" });
-            maquinas.Add(new Maquina { Codigo = 1, Nome = "Máquina 3" });
+            maquinas.Add(new Maquina { Codigo = 1, Descricao = "Máquina 1" });
+            maquinas.Add(new Maquina { Codigo = 1, Descricao = "Máquina 2" });
+            maquinas.Add(new Maquina { Codigo = 1, Descricao = "Máquina 3" });
 
             var pickerProjeto = new Picker { Title = "Projeto" };
             pickerProjeto.ItemsSource = projetos;

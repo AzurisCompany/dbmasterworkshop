@@ -14,16 +14,16 @@ namespace dbmasteraapp.Views
 	public partial class ChamadoDetalhePage : ContentPage
 	{
 
-		public ChamadoDetalhePage ()
+		public ChamadoDetalhePage (int codChamado)
 		{
             InitializeComponent ();
-            GetChamado();
+            GetChamado(codChamado);
 		}
 
-        private void GetChamado()
+        private void GetChamado(int codChamado)
         {
             Chamado t = new Chamado();
-            t.Codigo = 211681;
+            t.Codigo = codChamado;
             t.Titulo = "treinamento mobile";
             t.Descricao = "treinamento mobile treinamento mobile treinamento mobile";
             t.DataInclusao = new DateTime(2019, 2, 20, 17, 04, 0);

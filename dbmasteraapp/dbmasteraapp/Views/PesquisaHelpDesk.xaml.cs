@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dbmasteraapp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,24 @@ namespace dbmasteraapp.Views
 		public PesquisaHelpDesk ()
 		{
 			InitializeComponent ();
-		}
+            var projetoList = new List<Projeto>();
+            projetoList.Add(new Projeto { Codigo = 1, Descricao = "Crm" });
+            projetoList.Add(new Projeto { Codigo = 2, Descricao = "Portal cliente" });
+            projetoList.Add(new Projeto { Codigo = 3, Descricao = "Portal vendas" });
+            ProjetosTela.ItemsSource = projetoList;
+            ProjetosTela.ItemDisplayBinding = new Binding("Descricao");
+
+
+
+            var statusList = new List<Status>();
+            statusList.Add(new Status { Codigo = 1, Descricao = "Aberto" });
+            statusList.Add(new Status { Codigo = 2, Descricao = "Em Atendimento" });
+            statusList.Add(new Status { Codigo = 3, Descricao = "Validação Cliente" });
+            StatusTela.ItemsSource = statusList;
+            StatusTela.ItemDisplayBinding = new Binding("Descricao");
+
+
+        }
 
         private async void Button_Limpar(object sender, EventArgs e)
         {
@@ -24,6 +42,11 @@ namespace dbmasteraapp.Views
         private void Button_Buscar(object sender, EventArgs e)
         {
             Navigation.PushAsync(new ResultadoPesquisa());
-        }   
+        }
+
+        private void btnNovoChamado_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CriarChamado());
+        }
     }
 }

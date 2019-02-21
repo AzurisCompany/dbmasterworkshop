@@ -7,6 +7,6 @@ namespace dbmasteraapp.Models
     class Status
     {
         public int Codigo { get; set; }
-        public int Descricao { get; set; }
+        public string Descricao { get; set; }
     }
 }

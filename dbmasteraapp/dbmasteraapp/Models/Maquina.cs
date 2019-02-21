@@ -7,6 +7,6 @@ namespace dbmasteraapp.Models
     class Maquina
     {
         public int Codigo { get; set; }
-        public string Nome { get; set; }
+        public string Descricao { get; set; }
     }
 }

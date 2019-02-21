@@ -6,7 +6,7 @@
         <ListView SeparatorColor="Black" x:Name="listViewChamado" ItemSelected="listViewChamado_ItemSelected" IsPullToRefreshEnabled="True" Refreshing="listViewChamado_Refreshing">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Nome}" Detail="{Binding Email}">
+                    <TextCell Text="{Binding Codigo}" Detail="{Binding Titulo}">
                     </TextCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
