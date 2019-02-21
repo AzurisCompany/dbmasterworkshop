@@ -16,5 +16,10 @@ namespace dbmasteraapp.Views
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void Button_Clicked()
+        {
+
+        }
+    }
 }

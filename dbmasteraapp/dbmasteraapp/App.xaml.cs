@@ -17,7 +17,7 @@ namespace dbmasteraapp
             InitializeComponent();
             if (Preferences.Get("isLogged", false))
             {
-                MainPage = new MainPage();
+                MainPage = new PesquisaHelpDesk();
             }
             else
             {
