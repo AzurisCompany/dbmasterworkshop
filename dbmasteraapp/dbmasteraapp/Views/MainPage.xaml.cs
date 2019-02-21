@@ -40,7 +40,7 @@ namespace dbmasteraapp.Views
                         MenuPages.Add(id, new NavigationPage(new PesquisaHelpDesk()));
                         break;
                     case (int)MenuItemType.TicketDetail:
-                        MenuPages.Add(id, new NavigationPage(new TicketDetailPage()));
+                        MenuPages.Add(id, new NavigationPage(new ChamadoDetalhePage()));
                         break;
                 }
             }

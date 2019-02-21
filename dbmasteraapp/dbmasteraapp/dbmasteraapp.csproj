@@ -20,8 +20,8 @@
     <Compile Update="Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\TicketDetailPage.xaml.cs">
-      <DependentUpon>TicketDetailPage.xaml</DependentUpon>
+    <Compile Update="Views\ChamadoDetalhePage.xaml.cs">
+      <DependentUpon>ChamadoDetalhePage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -35,7 +35,7 @@
     <EmbeddedResource Update="Views\SettingsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\TicketDetailPage.xaml">
+    <EmbeddedResource Update="Views\ChamadoDetalhePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
