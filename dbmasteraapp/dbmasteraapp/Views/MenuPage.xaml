@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="dbmasteraapp.Views.MenuPage"
              Title="Menu">
-    <StackLayout VerticalOptions="FillAndExpand">
+    <StackLayout VerticalOptions="StartAndExpand">
         <ListView x:Name="ListViewMenu"
                     HasUnevenRows="True">
             <ListView.ItemTemplate>
@@ -16,5 +16,10 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Label Text="Sair"  FontSize="20" VerticalOptions="EndAndExpand" Margin="10,0,0,0" x:Name="ButtonLogout" >
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Logout" />
+            </Label.GestureRecognizers>
+        </Label>
     </StackLayout>
 </ContentPage>

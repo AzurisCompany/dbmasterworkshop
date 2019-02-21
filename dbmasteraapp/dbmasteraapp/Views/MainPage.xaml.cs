@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -43,7 +44,6 @@ namespace dbmasteraapp.Views
                         break;
                 }
             }
-
             var newPage = MenuPages[id];
 
             if (newPage != null && Detail != newPage)

@@ -1,7 +1,11 @@
 ﻿using dbmasteraapp.Models;
 using System;
 using System.Collections.Generic;
-
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,6 +15,7 @@ namespace dbmasteraapp.Views
     public partial class MenuPage : ContentPage
     {
         MainPage RootPage { get => Application.Current.MainPage as MainPage; }
+
         List<HomeMenuItem> menuItems;
         public MenuPage()
         {
@@ -26,7 +31,6 @@ namespace dbmasteraapp.Views
             };
 
             ListViewMenu.ItemsSource = menuItems;
-
             ListViewMenu.SelectedItem = menuItems[0];
             ListViewMenu.ItemSelected += async (sender, e) =>
             {
@@ -37,5 +41,30 @@ namespace dbmasteraapp.Views
                 await RootPage.NavigateFromMenu(id);
             };
         }
+
+        private async void Logout(object sender, EventArgs e)
+        {
+            if (await DisplayAlert("Sair", "Deseja sair do sistema?", "Sim", "Cancelar"))
+            {
+                try
+                {
+                    var existingPages = Navigation.NavigationStack.ToList();
+                    foreach (var page in existingPages)
+                    {
+                        Navigation.RemovePage(page);
+                    }
+                    Preferences.Set("isLogged", false);
+                    MessagingCenter.Send<object>(this, App.EVENT_LAUNCH_LOGIN_PAGE);
+
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex);
+                }
+            }
+
+
+        }
+
     }
 }
