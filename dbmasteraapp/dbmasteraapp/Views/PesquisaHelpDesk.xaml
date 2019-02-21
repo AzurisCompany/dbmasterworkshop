@@ -21,6 +21,7 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
 
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
@@ -42,8 +43,12 @@
                     <Label FontAttributes="Bold" FontSize="14" Grid.Row="8" Grid.Column="0" Text="Que eu acompanha" TextColor="Black"  Margin="10,0,0,0" VerticalOptions="CenterAndExpand"/>
                     <Switch IsToggled="false"  Grid.Column="0" Grid.Row="9" Margin="0,0,40,0"  />
                     <Label FontAttributes="Bold" FontSize="14" Grid.Row="9" Grid.Column="0" Text="Meus chamados" TextColor="Black"  Margin="10,0,0,0" VerticalOptions="CenterAndExpand"/>
+                    <Button Text="Limpar" WidthRequest="110" Padding="10"  Grid.Row="10" Grid.Column="0" HorizontalOptions="Center"  BorderRadius="7" BackgroundColor="Red" TextColor="White" />
+                    <Button Text="Pesquisa" WidthRequest="110" Padding="10"  Grid.Row="10" Grid.Column="0" HorizontalOptions="End" BorderRadius="7" BackgroundColor="Red" TextColor="White" />
                 </Grid>
 
+                
+                
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
