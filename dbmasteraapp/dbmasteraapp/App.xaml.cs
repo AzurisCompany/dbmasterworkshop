@@ -23,8 +23,6 @@ namespace dbmasteraapp
             {
                 MainPage = new LoginPage();
             }
-            MainPage.SetValue(NavigationPage.BarBackgroundColorProperty, Color.Red); //COR DA BARRA DE STATUS
-
             MessagingCenter.Subscribe<object>(this, EVENT_LAUNCH_LOGIN_PAGE, SetLoginPageAsRootPage);
             MessagingCenter.Subscribe<object>(this, EVENT_LAUNCH_MAIN_PAGE, SetMainPageAsRootPage);
             

@@ -15,7 +15,6 @@ namespace dbmasteraapp.Views
         public MainPage()
         {
             InitializeComponent();
-
             MasterBehavior = MasterBehavior.Popover;
 
             MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
@@ -28,19 +27,19 @@ namespace dbmasteraapp.Views
                 switch (id)
                 {
                     case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
+                        MenuPages.Add(id, new NavigationPage(new ItemsPage()) { BarBackgroundColor = Color.Red } );
                         break;
                     case (int)MenuItemType.About:
-                        MenuPages.Add(id, new NavigationPage(new AboutPage()));
+                        MenuPages.Add(id, new NavigationPage(new AboutPage()) { BarBackgroundColor = Color.Red });
                         break;
                     case (int)MenuItemType.Settings:
-                        MenuPages.Add(id, new NavigationPage(new SettingsPage()));
+                        MenuPages.Add(id, new NavigationPage(new SettingsPage()) { BarBackgroundColor = Color.Red });
                         break;
                     case (int)MenuItemType.PesquisaHelpDesk:
-                        MenuPages.Add(id, new NavigationPage(new PesquisaHelpDesk()));
+                        MenuPages.Add(id, new NavigationPage(new PesquisaHelpDesk()) { BarBackgroundColor = Color.Red });
                         break;
                     case (int)MenuItemType.TicketDetail:
-                        MenuPages.Add(id, new NavigationPage(new TicketDetailPage()));
+                        MenuPages.Add(id, new NavigationPage(new ChamadoDetalhePage()));
                         break;
                 }
             }
