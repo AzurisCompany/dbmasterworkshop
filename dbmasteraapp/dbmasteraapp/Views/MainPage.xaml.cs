@@ -1,4 +1,5 @@
-﻿using dbmasteraapp.Models;
+﻿using dbmasteraapp.Custom;
+using dbmasteraapp.Models;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -27,16 +28,16 @@ namespace dbmasteraapp.Views
                 switch (id)
                 {
                     case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()) { BarBackgroundColor = Color.Red } );
+                        MenuPages.Add(id, new NavigationPage(new ItemsPage())  );
                         break;
                     case (int)MenuItemType.About:
-                        MenuPages.Add(id, new NavigationPage(new AboutPage()) { BarBackgroundColor = Color.Red });
+                        MenuPages.Add(id, new NavigationPage(new AboutPage()) );
                         break;
                     case (int)MenuItemType.Settings:
-                        MenuPages.Add(id, new NavigationPage(new SettingsPage()) { BarBackgroundColor = Color.Red });
+                        MenuPages.Add(id, new NavigationPage(new SettingsPage()) );
                         break;
                     case (int)MenuItemType.PesquisaHelpDesk:
-                        MenuPages.Add(id, new NavigationPage(new PesquisaHelpDesk()) { BarBackgroundColor = Color.Red });
+                        MenuPages.Add(id, new NavigationPage(new PesquisaHelpDesk()));
                         break;
                     case (int)MenuItemType.CriarChamado:
                         MenuPages.Add(id, new NavigationPage(new CriarChamado()));
@@ -55,5 +56,13 @@ namespace dbmasteraapp.Views
                 IsPresented = false;
             }
         }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            StatusBarEffect.SetBackgroundColor(Color.Red);
+            this.Effects.Add(new StatusBarEffect());
+        }
+
     }
 }

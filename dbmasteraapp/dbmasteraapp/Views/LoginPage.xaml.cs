@@ -4,6 +4,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
 using dbmasteraapp.ViewModels;
+using dbmasteraapp.Custom;
 
 namespace dbmasteraapp.Views
 {
@@ -13,15 +14,21 @@ namespace dbmasteraapp.Views
 		public LoginPage()
 		{
 			InitializeComponent();
-
-            Login.TextChanged += EnableLoginButton;
-            Senha.TextChanged += EnableLoginButton;
+            LoginField.ReturnCommand = new Command(() => SenhaField.Focus());
+            SenhaField.ReturnCommand = new Command(() => Login());
+            LoginField.TextChanged += EnableLoginButton;
+            SenhaField.TextChanged += EnableLoginButton;
 		}
 
         private void BtnLogin_Clicked(object sender, EventArgs e)
         {
+            Login();
+        }
+
+        public void Login()
+        {
             LoginViewModel vm = new LoginViewModel();
-            if (vm.Autenticar(new Models.Usuario() { Login = Login.Text, Senha = Senha.Text }))
+            if (vm.Autenticar(new Models.Usuario() { Login = LoginField.Text, Senha = SenhaField.Text }))
             {
                 Preferences.Set("isLogged", true);
                 MessagingCenter.Send<object>(this, App.EVENT_LAUNCH_MAIN_PAGE);
@@ -34,7 +41,7 @@ namespace dbmasteraapp.Views
 
         public void EnableLoginButton(object sender, TextChangedEventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(Login.Text) && !string.IsNullOrWhiteSpace(Senha.Text))
+            if (!string.IsNullOrWhiteSpace(LoginField.Text) && !string.IsNullOrWhiteSpace(SenhaField.Text))
             {
                 btnLogin.IsEnabled = true;
             }
@@ -42,6 +49,13 @@ namespace dbmasteraapp.Views
             {
                 btnLogin.IsEnabled = false;
             }
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            StatusBarEffect.SetBackgroundColor(Color.Red);
+            this.Effects.Add(new StatusBarEffect());
         }
 
     }
