@@ -107,6 +107,10 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\dbmasterws\dbmasterws.csproj">
+      <Project>{ef53835a-6c3d-4ee1-92a0-eb91e1ffb00a}</Project>
+      <Name>dbmasterws</Name>
+    </ProjectReference>
     <ProjectReference Include="..\dbmasteraapp\dbmasteraapp.csproj">
       <Project>{38B290DF-A0F5-400F-9A75-8BEC709012CB}</Project>
       <Name>dbmasteraapp</Name>
