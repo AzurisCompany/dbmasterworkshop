@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="dbmasteraapp.Views.ResultadoPesquisa">
+             x:Class="dbmasteraapp.Views.ResultadoPesquisa" BackgroundColor="#EAEAEA">
     <ContentPage.Content>
         <ListView SeparatorColor="Black" x:Name="listViewChamado" ItemSelected="listViewChamado_ItemSelected" IsPullToRefreshEnabled="True" Refreshing="listViewChamado_Refreshing">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Codigo}" Detail="{Binding Titulo}">
+                    <TextCell Text="teste" Detail="TESTE">
                     </TextCell>
+                    
                 </DataTemplate>
             </ListView.ItemTemplate>
-
+    
         </ListView>
     </ContentPage.Content>
 </ContentPage>
