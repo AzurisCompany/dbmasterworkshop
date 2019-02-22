@@ -56,13 +56,5 @@ namespace dbmasteraapp.Views
                 IsPresented = false;
             }
         }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            StatusBarEffect.SetBackgroundColor(Color.Red);
-            this.Effects.Add(new StatusBarEffect());
-        }
-
     }
 }
