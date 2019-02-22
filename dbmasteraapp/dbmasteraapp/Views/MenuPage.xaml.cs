@@ -23,11 +23,18 @@ namespace dbmasteraapp.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
-                new HomeMenuItem {Id = MenuItemType.About, Title="About" },
-                new HomeMenuItem {Id = MenuItemType.Settings, Title="Settings" },
-                new HomeMenuItem {Id = MenuItemType.PesquisaHelpDesk, Title="Pesquisa" },
-                new HomeMenuItem {Id = MenuItemType.CriarChamado, Title = "Novo Chamado" }
+                new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse", Image="questionmark.png" },
+                new HomeMenuItem {Id = MenuItemType.About, Title="About", Image="questionmark.png" },
+                new HomeMenuItem {Id = MenuItemType.Settings, Title="Settings", Image="handymantools" },
+                new HomeMenuItem {Id = MenuItemType.PesquisaHelpDesk, Title="Pesquisa", Image="magnifier.png" },
+                new HomeMenuItem {Id = MenuItemType.CriarChamado, Title = "Novo Chamado", Image="questionmark.png" },
+
+                new HomeMenuItem {Id = MenuItemType.About, Title="Help desk", Image="helpdesk.png" },
+                new HomeMenuItem {Id = MenuItemType.About, Title="Ticket history", Image="barchart.png" },
+                new HomeMenuItem {Id = MenuItemType.About, Title="Monitoring", Image="heartbeat.png" },
+                new HomeMenuItem {Id = MenuItemType.About, Title="Send your feedback", Image="supportspeech.png" },
+                new HomeMenuItem {Id = MenuItemType.About, Title="News", Image="openbook.png" },
+                new HomeMenuItem {Id = MenuItemType.About, Title="Contact us", Image="telephone.png" }
             };
 
             ListViewMenu.ItemsSource = menuItems;
@@ -62,9 +69,12 @@ namespace dbmasteraapp.Views
                     Debug.WriteLine(ex);
                 }
             }
-
-
         }
 
+        private async void OnTappedProfile(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new ProfilePage());
+        }
+        
     }
 }
