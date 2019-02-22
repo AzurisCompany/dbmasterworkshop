@@ -16,7 +16,7 @@
                 </controls:CircleImage.GestureRecognizers>
             </controls:CircleImage>
             <StackLayout Spacing="5" Margin="0,10,0,0" VerticalOptions="Center">
-                <Label Text="Usuário Teste" 
+                <Label Text="{Binding Nome}" 
                            TextColor="#303030" 
                            FontSize="20" 
                            FontAttributes="Bold" />

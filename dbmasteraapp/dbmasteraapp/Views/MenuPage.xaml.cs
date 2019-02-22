@@ -15,11 +15,13 @@ namespace dbmasteraapp.Views
     public partial class MenuPage : ContentPage
     {
         MainPage RootPage { get => Application.Current.MainPage as MainPage; }
+        public string Nome { get; } = "Usuário Teste";
 
         List<HomeMenuItem> menuItems;
         public MenuPage()
         {
             InitializeComponent();
+            BindingContext = this;
 
             menuItems = new List<HomeMenuItem>
             {
