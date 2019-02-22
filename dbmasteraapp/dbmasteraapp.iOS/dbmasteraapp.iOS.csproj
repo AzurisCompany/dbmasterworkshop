@@ -141,6 +141,9 @@
     <PackageReference Include="UXDivers.GorillaPlayer.SDK.AutoConfig">
       <Version>1.5.0-Beta4</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
+      <Version>3.0.0.5</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
       <Version>1.0.1</Version>
     </PackageReference>
