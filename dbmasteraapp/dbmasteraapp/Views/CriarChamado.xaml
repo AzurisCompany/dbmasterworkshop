@@ -2,17 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="dbmasteraapp.Views.CriarChamado"
-             Title="Novo Chamado">
+             Title="Novo Chamado" BackgroundColor="#eaeaea">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Projeto" />
-            <Picker x:Name="PickerProjeto" ItemDisplayBinding="Descricao" />
-            <Label Text="Tipo" />
-            <Picker x:Name="PickerTipo" ItemDisplayBinding="Descricao" />
-            <Label Text="Maquina" />
-            <Picker x:Name="PickerMaquina" ItemDisplayBinding="Descricao" />
+    <StackLayout Margin="10">
+            <Grid BackgroundColor="White" Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label FontAttributes="Bold"   Grid.Row="1" Grid.Column="0" Text="Projeto" TextColor="Black" VerticalOptions="StartAndExpand"  />
+                <Picker x:Name="PickerProjeto" Grid.Row="2" Grid.Column="0" ItemDisplayBinding="{Binding  Descricao}" SelectedIndex="1" Grid.ColumnSpan="2"  />
+                <Label FontAttributes="Bold"   Grid.Row="3" Grid.Column="0" Text="Tipo" TextColor="Black" Margin="10,0,0,0" VerticalOptions="StartAndExpand" />
+                <Picker x:Name="PickerTipo"    Grid.Row="4" Grid.Column="0" ItemDisplayBinding="{Binding  Descricao}" SelectedIndex="1" />
+                <Label FontAttributes="Bold"   Grid.Row="3" Grid.Column="1"  Text="Máquina" TextColor="Black" Margin="10,0,0,0" VerticalOptions="StartAndExpand" />
+                <Picker x:Name="PickerMaquina" Grid.Row="4" Grid.Column="1"  ItemDisplayBinding="{Binding  Descricao}" SelectedIndex="1" />
+                <Button Text="Criar chamado"   Grid.Row="5" Grid.Column="0" Clicked="Criar_Chamado"  Grid.ColumnSpan="2" />
+            </Grid>
         </StackLayout>
-
-
     </ContentPage.Content>
 </ContentPage>

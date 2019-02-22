@@ -34,5 +34,10 @@ namespace dbmasteraapp.Views
             PickerMaquina.ItemsSource = maquinas;
           
         }
+
+        private void Criar_Chamado(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
