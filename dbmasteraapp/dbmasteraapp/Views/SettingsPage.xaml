@@ -10,7 +10,7 @@
     <StackLayout Orientation="Vertical" Spacing="20" Margin="10">
         <Label Text="Ative ou desative o envio de notificações" />
         <StackLayout Orientation="Horizontal" BackgroundColor="White" Padding="20">
-            <Label Text="Notificacoes" FontSize="Medium"  VerticalOptions="Start" FontAttributes="Bold" />
+            <Label Text="Notificações" FontSize="Medium"  VerticalOptions="Start" FontAttributes="Bold" />
             <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="EndAndExpand">
                 <BoxView  WidthRequest ="20" HeightRequest="20" VerticalOptions="Start" HorizontalOptions="EndAndExpand" />
                 <Switch IsToggled="true" HorizontalOptions="Start" VerticalOptions="Start"/>

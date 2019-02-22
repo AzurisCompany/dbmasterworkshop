@@ -23,6 +23,7 @@ namespace dbmasteraapp
             {
                 MainPage = new LoginPage();
             }
+            
             MessagingCenter.Subscribe<object>(this, EVENT_LAUNCH_LOGIN_PAGE, SetLoginPageAsRootPage);
             MessagingCenter.Subscribe<object>(this, EVENT_LAUNCH_MAIN_PAGE, SetMainPageAsRootPage);
             

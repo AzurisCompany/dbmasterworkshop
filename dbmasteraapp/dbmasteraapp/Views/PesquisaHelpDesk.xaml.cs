@@ -1,4 +1,5 @@
-﻿using dbmasteraapp.Models;
+﻿using dbmasteraapp.Custom;
+using dbmasteraapp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,6 +46,13 @@ namespace dbmasteraapp.Views
         private void btnNovoChamado_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new CriarChamado());
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            StatusBarEffect.SetBackgroundColor(Color.Red);
+            Effects.Add(new StatusBarEffect());
         }
     }
 }

@@ -23,9 +23,11 @@ namespace dbmasteraapp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            UIApplication.SharedApplication.SetStatusBarStyle(UIStatusBarStyle.LightContent, false); // <--- STATUS TEXT COLOR -- CUSTOM
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
         }
+
     }
 }
