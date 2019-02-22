@@ -4,6 +4,15 @@
              x:Class="dbmasteraapp.Views.CriarChamado"
              Title="Novo Chamado">
     <ContentPage.Content>
-        
+        <StackLayout>
+            <Label Text="Projeto" />
+            <Picker x:Name="PickerProjeto" ItemDisplayBinding="Descricao" />
+            <Label Text="Tipo" />
+            <Picker x:Name="PickerTipo" ItemDisplayBinding="Descricao" />
+            <Label Text="Maquina" />
+            <Picker x:Name="PickerMaquina" ItemDisplayBinding="Descricao" />
+        </StackLayout>
+
+
     </ContentPage.Content>
 </ContentPage>

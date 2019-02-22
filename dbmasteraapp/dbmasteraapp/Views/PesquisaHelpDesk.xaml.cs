@@ -21,7 +21,6 @@ namespace dbmasteraapp.Views
             projetoList.Add(new Projeto { Codigo = 2, Descricao = "Portal cliente" });
             projetoList.Add(new Projeto { Codigo = 3, Descricao = "Portal vendas" });
             ProjetosTela.ItemsSource = projetoList;
-            ProjetosTela.ItemDisplayBinding = new Binding("Descricao");
 
 
 
@@ -30,7 +29,6 @@ namespace dbmasteraapp.Views
             statusList.Add(new Status { Codigo = 2, Descricao = "Em Atendimento" });
             statusList.Add(new Status { Codigo = 3, Descricao = "Validação Cliente" });
             StatusTela.ItemsSource = statusList;
-            StatusTela.ItemDisplayBinding = new Binding("Descricao");
 
 
         }
